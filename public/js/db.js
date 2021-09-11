@@ -10,11 +10,11 @@ const request = indexedDB.open("budget", 1);
 let idb;
 
 function checkDatabase() {
-  const transaction = db.transaction(["pending"], "readwrite");
+  const transaction = db.transaction(["pending"], "readonly");
   const store = transaction.objectStore("pending");
   const getAll = store.getAll();
 
-  getAll.onsuccess = function() {
+  getAll.onsuccess = () => {
     if (getAll.result.length > 0) {
       fetch("/api/transaction/bulk", {
         method: "POST",
@@ -26,14 +26,17 @@ function checkDatabase() {
       })
       .then(response => response.json())
       .then(() => {
-        const transaction = db.transaction(["pending"], "readwrite");
-
+        const transaction = db.transaction(["pending"], "readonly");
         const store = transaction.objectStore("pending");
-
         store.clear();
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
       });
     }
   };
 }
+
 
 window.addEventListener("online", checkDatabase);
