@@ -1,7 +1,7 @@
 # Budget Tracker 
 
 ## Description
-An application which can work online and allows the user to calculate their expenses. 
+An application which can work online and offline and allows the user to calculate their expenses. 
 
 ## Table of Contents
 * [Installation](#installation)
