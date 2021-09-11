@@ -15,7 +15,8 @@ An application which can work online and offline and allows the user to calculat
 The user will clone the repository and run `npm install` followed by `npm start`. 
 
 ## Usage 
-<img width="1358" alt="Screen Shot 2021-09-10 at 11 01 44 PM" src="https://user-images.githubusercontent.com/81194686/132954652-b87db291-f986-4a5e-973b-b3e5e8d8b0cb.png">
+<img width="964" alt="Screen Shot 2021-09-11 at 12 08 49 PM" src="https://user-images.githubusercontent.com/81194686/132954680-a172ef62-2c7a-41f2-b59f-951b77883b59.png">
+
 
 ## Links
 * [Deployed Application](https://budget-tracker2397.herokuapp.com/)
